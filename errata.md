@@ -1,5 +1,28 @@
 # Errata for *C++20 Recipes*
 
+On **page 229 (Listing 7-10)** [code]:
+ 
+int main(int argv, char *argc[])
+
+should be
+
+int main(int argc, char *argv[])
+
+Names argc and argv are reversed.
+
+***
+
+On **beginning on page 231 (Listings 7-11 through 7-17** [code]:
+ 
+int main(int argv, char *argc[])
+
+should be
+
+int main(int argc, char *argv[])
+
+Names argc and argv are reversed.
+
+***
 On **page 442** [incorrect link]:
  
 The link on page 442 seems to be incorrect, it allows the reader to download the “ws2_32.*dll*” 
