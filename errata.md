@@ -12,7 +12,7 @@ Names argc and argv are reversed.
 
 ***
 
-On **beginning on page 231 (Listings 7-11 through 7-17** [code]:
+On **beginning on page 231 (Listings 7-11 through 7-17)** [code]:
  
 int main(int argv, char *argc[])
 
