@@ -35,8 +35,18 @@ https://urldefense.proofpoint.com/v2/url?u=https-3A__osdn.net_projects_sfnet-5Fh
 
 ***
 
-On **page xx** [Summary of error]:
+In **Chapter 12** [code]:
  
-Details of error here. Highlight key pieces in **bold**.
+In the various code listings, the Socket class does not compile when building for release.
+
+The <sstream> header is included only if NDEBUG is not defined, but the Socket::Send function takes a stringstream object as a parameter and the Socket::Receive function returns a stringstream object. If the NDEBUG is defined the <sstream> header is not included and stringstream is an undefined type.
+
+***
+
+On **pages 483 and 494** [code: Listings 12-8 and 12-9]:
+ 
+The client code (Listing 12-9) reads the answer from cin using the extraction operator >>. This stops at the first space, so will only read the word "Washington" from the input "Washington DC". The code should be changed to use getline rather than the extraction operator.
+
+The server code (Listing 12-8) reads the received answer from the stringstream object using the extraction operator. Again, this stops at the first space character so even after the client is fixed to send "Washington DC" to the server, the server will only see the first word and report an incorrect answer. As with the client, the code should retrieve the answer from the stream with the getline function.
 
 ***
