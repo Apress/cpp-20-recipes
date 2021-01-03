@@ -50,3 +50,8 @@ The client code (Listing 12-9) reads the answer from cin using the extraction op
 The server code (Listing 12-8) reads the received answer from the stringstream object using the extraction operator. Again, this stops at the first space character so even after the client is fixed to send "Washington DC" to the server, the server will only see the first word and report an incorrect answer. As with the client, the code should retrieve the answer from the stream with the getline function.
 
 ***
+On **pages 500 and 501** [code; Listings 13-1 and 13-1b]
+
+Both of these programs crash at their end, apparently because the sol::state destructor is called both explicitly in code and again at the end of the main function. I believe the explicit calls to the destructor should be removed.
+
+***
