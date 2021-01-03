@@ -23,6 +23,13 @@ int main(int argc, char *argv[])
 Names argc and argv are reversed.
 
 ***
+On **pages 418 and 424** [technical accuracy, Listings 11-16 and 11-17]
+
+The member function
+    int operator *() const throw(int)
+uses dynamic exception specification 'throw(int)' which was removed in C++17. It should not be used in C++20 code.
+
+***
 On **page 442** [incorrect link]:
  
 The link on page 442 seems to be incorrect, it allows the reader to download the “ws2_32.*dll*” 
