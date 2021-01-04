@@ -23,6 +23,32 @@ int main(int argc, char *argv[])
 Names argc and argv are reversed.
 
 ***
+
+On page 300 [code]
+
+In Listing 9-13, the function  void foo(T) has no implementation. The code fails to link.
+
+***
+On **pages 325 and 330** [code}
+
+In Listings 10-13 and 10-14, the move-assignment function
+    SmartPointer<T>& operator=(SmartPointer<T>&& other) is missing the
+     return *this;
+statement. This code will fail to compile if an attempt is made to use the move-assignment operator.
+
+***
+
+On **page 342** [code]
+
+In Listing 10-18, Code as printed does not compile due to undefined variable "I" (upper-case). The line
+    unsigned int squared{ i*i*I };
+should be
+    unsigned int squared{ i*i*i };
+as it appears in the GitHub repo code, or should be
+    unsigned int squared{ i*i };
+to more closely match the variable name "squared."
+
+***
 On **pages 418 and 424** [technical accuracy, Listings 11-16 and 11-17]
 
 The member function
