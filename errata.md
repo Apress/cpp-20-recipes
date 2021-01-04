@@ -49,6 +49,11 @@ as it appears in the GitHub repo code, or should be
 to more closely match the variable name "squared."
 
 ***
+On **page 370** [technical accuracy]
+
+Contrary to the statement in the last paragraph on page 369, Figure 11-3 on page 370 does not show output from main occurring in the middle of the output from ThreadTask. Output from main occurs first.
+
+***
 On **pages 418 and 424** [technical accuracy, Listings 11-16 and 11-17]
 
 The member function
