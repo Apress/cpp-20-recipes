@@ -93,3 +93,27 @@ On **pages 500 and 501** [code; Listings 13-1 and 13-1b]
 Both of these programs crash at their end, apparently because the sol::state destructor is called both explicitly in code and again at the end of the main function. I believe the explicit calls to the destructor should be removed.
 
 ***
+
+On **page 582** [code}
+
+In Listing 14-11, the program uses std::ifstream but does not #include <fstream>. Program as printed does not compile.
+
+***
+
+On **page 583** [code]
+
+In Listing 14-11, the Function void GetImageData() const should return void*, not void. Additionally, Data member m_pImageData of class Texture should be of type void *, not void.
+
+***
+
+On **page 584** [code]
+
+In Listing 14-11, the 2nd constructor of class Texture (taking 5 parameters), the fifth parameter (pImageData) should be of type void *, not void.
+
+***
+
+On **pages 561 and 599** [code]
+
+In Listings 14-6 and 14-11, the programs use WinMain rather than main, without #including windows.h. Thus neither program compiles successfully.
+
+***
